@@ -1,0 +1,48 @@
+# --- 비밀 값 ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+*-secret.yaml
+*.secret.yaml
+# Helm values에 키를 넣을 경우 로컬 전용 파일로 분리
+values.local.yaml
+*.local.yaml
+
+# --- Terraform ---
+# state에는 리소스 속성(ARN, 계정 ID, 경우에 따라 비밀 값)이 평문으로 남는다
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+# 실제 변수 값(계정 ID, 이메일 등)은 커밋하지 않고 example만 커밋
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+*.tfplan
+# .terraform.lock.hcl은 provider 버전 고정용이라 커밋한다
+
+# --- Kubernetes / kind ---
+kubeconfig
+*.kubeconfig
+
+# --- AWS ---
+.aws/
+
+# --- OS / 에디터 ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- Claude Code 로컬 설정 ---
+.claude/settings.local.json

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# 커밋 직전 staged 변경분에서 비밀 값(AWS 키, 토큰 등)을 검사한다.
+# 활성화: git config core.hooksPath .githooks
+set -euo pipefail
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "gitleaks가 설치되어 있지 않습니다: brew install gitleaks" >&2
+  exit 1
+fi
+
+gitleaks git --staged --redact --no-banner
