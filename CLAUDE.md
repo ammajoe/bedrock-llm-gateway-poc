@@ -20,7 +20,7 @@ Bedrock + LiteLLM, 로컬 kind(운영 전환 시 EKS), 게이트웨이 자격증
 ### Phase 0. 환경 준비
 - [x] 도구 설치: OrbStack(Docker), AWS CLI v2, Terraform, kubectl, kind, Helm, Claude Code
 - [x] Git 저장소(main), .gitignore, gitleaks pre-commit hook, docs 기록 체계
-- [ ] 첫 커밋 + GitHub 원격 저장소
+- [x] 첫 커밋 + GitHub 원격 저장소(public: ammajoe/bedrock-llm-gateway-poc)
 - [ ] IAM Identity Center 작업용 사용자 + `aws configure sso`
 - [ ] Bedrock 모델 접근 신청(승인 지연 대비 미리)
 

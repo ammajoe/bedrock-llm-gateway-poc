@@ -149,6 +149,8 @@ llm-gateway/
 | Docker 런타임으로 OrbStack | Mac에서 가볍고 빠름 (배터리·메모리 절약) | Docker Desktop이 더 범용적 |
 | 저장소를 GitHub에 공개 | 포트폴리오로 코드·의사결정·작업 기록을 근거로 제시 | 비밀 값 유출 위험 → `.gitignore`(state, tfvars, .env, kubeconfig) + gitleaks pre-commit hook으로 차단 |
 | 비밀 값 검사는 gitleaks + `.githooks/` | hook 스크립트를 저장소에 포함해 버전 관리, 별도 프레임워크(pre-commit) 의존 없음 | 클론 후 `git config core.hooksPath .githooks`를 직접 실행해야 함 |
+| 저장소 이름 `bedrock-llm-gateway-poc` | 공고 키워드(Bedrock)를 드러내고 `-poc`로 프로젝트 성격을 정직하게 표현 | `-poc`가 완성도가 낮아 보일 수 있음 |
+| GitHub Push protection 추가 | 로컬 hook은 설정 누락 시 우회되므로 서버 쪽 이중 방어 | 없음(public 저장소 무료) |
 
 새 결정이 생기면 이 표에 추가한다.
 
